@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hong.practice4.calculator">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabhost">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#affaed">
+
+
+                <LinearLayout
+                    android:id="@+id/area_tap"
+                    android:layout_width="300dp"
+                    android:layout_height="400dp"
+                    android:layout_gravity="center"
+                    android:background="#bbf9f9f8"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="평이나 면적을 입력하세요 "
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f5f0ca"
+                        android:ems="10"
+                        android:hint="숫자만 입력해주세요"
+                        android:inputType="textPersonName"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/change_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="계산결과가 없습니다"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/change_meter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="onClick"
+                        android:text="평을 제곱미터로 변환"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/change_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="onClick"
+                        android:text="제곱미터를 평으로 변환"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bmi_tap"
+                    android:layout_width="280dp"
+                    android:layout_height="380dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_gravity="center"
+                    android:background="#bbf9f9f8">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="키와 몸무게를 입력해주세요"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="키(cm)"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        android:id="@+id/height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:hint="숫자만 입력해주세요"
+                        android:layout_marginBottom="10dp"
+                        android:background="#f3ddeb"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="몸무게(kg)"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        android:id="@+id/weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="숫자만 입력해주세요요"
+                        android:inputType="textPersonName"
+                        android:layout_marginBottom="10dp"
+                        android:background="#f3ddeb"
+                        android:textSize="15dp"/>
+
+                    <Button
+                        android:id="@+id/bmi_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BMI 계산 결과 "
+                        android:textSize="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="onClick"/>
+                    <TextView
+                        android:id="@+id/bmi_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="결과가 없습니다"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
